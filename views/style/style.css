@@ -1,0 +1,100 @@
+/* @font-face {
+    font-family: 'Nasalization';
+    src: url('../../assets/font/nasalization.ttf');
+}
+
+* {
+    color: black;
+    font-family: 'Nasalization';
+} */
+
+body {
+  color: black;
+  margin: 0;
+  font-family: poppins;
+}
+
+nav {
+  position: fixed;
+  width: 100vw;
+  background: rgba(255, 255, 255, 0.33);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(14.1px);
+  -webkit-backdrop-filter: blur(14.1px);
+}
+
+nav ul li {
+  list-style-type: none;
+}
+
+nav ul {
+  display: flex;
+  justify-content: end;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  margin-left: 1rem;
+  margin-right: 2rem;
+  font-weight: bold;
+}
+
+.wrapper {
+  padding-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper h1 {
+  margin: 0;
+  text-align: center;
+}
+
+.wrapper img {
+  margin-top: 2rem;
+    width: 40rem;
+    height: auto;
+}
+
+.liste_p {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    margin-top: 2rem;
+    column-gap: 1.5rem;
+    row-gap: 2rem;
+}
+
+.liste_p img {
+    width: 20rem;
+    height: 20rem;
+    border-radius: .8rem;
+    justify-content: center;
+}
+
+
+.product img{
+    width: 20rem;
+    height: 20rem;
+    margin-top: 4rem;
+    border-radius: .8rem;
+    justify-content: center;
+}
+
+.coca {
+    border: 1px solid black;
+    border-radius: 15px;
+    list-style-type: none;
+    text-align: center;
+}
+
+.product{
+    border: 1px solid black;
+    border-radius: 15px;
+    list-style-type: none;
+    text-align: center;
+}
