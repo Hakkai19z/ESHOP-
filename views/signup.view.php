@@ -2,6 +2,7 @@
 
 include '../partials/header.php';
 include '../config/pdo.php';
+include '../utils/functions.php';
 
 
 // On vérifie que le form ait été soumis 
@@ -21,7 +22,17 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
             if (filter_var($email, FILTER_VALIDATE_EMAIL))  {
                 // Création du hash
                 $hash = password_hash($password, PASSWORD_DEFAULT);
-        
+
+                // Appel de la fonction checkExists qui va verifier si un utilisateur existe déja dans la BDD
+                if (checkExists('name', $name, $pdo)) {
+                    $error = "Ce pseudo est déja pris";
+                } else if (checkExists('email', $email, $pdo)) {
+                    $error = "Cet email est déja pris";
+                } else {
+                    $error = "Erreur lors de la vérification";
+                } 
+
+
                 // On écrit notre requete préparée 
                 $sql = "INSERT INTO users(name, email, password) VALUES(?, ?, ?)";
                 $stmt = $pdo->prepare($sql);
