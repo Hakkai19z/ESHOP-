@@ -22,7 +22,7 @@
             <li><a href="../index.php">Accueil</a></li>
             <li><a href="./views/products.view.php">Produits</a></li>
             <li><a href="./views/contact.view.php">Contact</a></li>
-            <li><a href="Signup.view.php">Signup</a></li>
+            <li><a href="./views/signup.view.php">Signup</a></li>
 
         </ul>
     </nav>
