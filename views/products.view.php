@@ -3,7 +3,7 @@
 include '../partials/header.php';
 include '../config/cURL.php'
 
-    ?>
+?>
 
 <div class="wrapper">
     <h1>Page de produits</h1>
@@ -24,7 +24,7 @@ include '../config/cURL.php'
                         <h2>
                             <?= $product['price'] ?> €
                         </h2>
-                        <button><a>Ajouter au panier</a></button>
+                        <button><a href="cart.view.php?product=<?= $product['id'] ?>">Ajouter au panier</a></button>
                     </li>
                 </div>
             <?php endforeach ?>

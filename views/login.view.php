@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 
     <form class="login-form" method="POST">
         <input type="email" name="email" placeholder="Votre email ...">
-        <input type="password" name="password" placeholder="Votre mot de passe ...">
+        <input type="password" name="password" placeholder="Votre mot de passe ..." focus>
         <input type="submit" name="submit" value="login">
     </form>
 

@@ -1,16 +1,25 @@
-<?php 
+<?php
 
-// Fichier de functions utiles
+// FICHIER DE FONCTIONS UTILES
 
-function checkExists($field, $param, $pdo){
-    // Vérifier si le nom et l'email ne sont pas dans la base de données
-    $sql= "SELECT * FROM users WHERE $field = ?";
+// SIGNUP
+
+function checkExists($field, $param, $pdo) {
+    // Vérifier si le nom et l'email ne sont pas déjà en BDD
+    $sql = "SELECT * FROM users WHERE $field = ?";
     $stmt = $pdo->prepare($sql);
-    $stmt->execute([$param]);
+    $result = $stmt->execute([$param]);
     
-    if ($stmt->rowCount() > 0) {
-        return true;
-    } else {
-        return false;
-    }
+    // Opérateur ternaire cad autre manière d'écrire des if ... else 
+    return ($stmt->rowCount() > 0) ? true : false;
+}
+
+
+// FONCTION DUMP AND DIE
+
+function dd($param) {
+    echo "<pre>";
+    var_dump($param);
+    echo "</pre>";
+    die();
 }

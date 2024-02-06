@@ -131,6 +131,20 @@ input[type="submit"]{
   display: flex;
 }
 
+button{
+  background-color: #1E90FF;
+  color: white;
+  height: 2rem;
+  border-radius: 6px;
+  border: solid 1px #1E90FF;
+}
+
+button a {
+  color: white;
+  text-decoration: none;
+}
+
+
 .signup-form{
   margin-top: 4rem;
 }
