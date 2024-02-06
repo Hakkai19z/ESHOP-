@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,9 +21,19 @@
 
         <ul>
             <li><a href="../index.php">Accueil</a></li>
-            <li><a href="./views/products.view.php">Produits</a></li>
             <li><a href="./views/contact.view.php">Contact</a></li>
-            <li><a href="./views/signup.view.php">Signup</a></li>
+
+            <?php if (isset($_SESSION['user']['logged']) && $_SESSION['user']['logged']): ?>
+                
+                <li><a href="./views/products.view.php">Produits</a></li>
+                <li><a href="./views/logout.php">Logout</a></li>
+
+            <?php else: ?>
+
+                <li><a href="./views/login.view.php">Login</a></li>
+                <li><a href="./views/signup.view.php">Signup</a></li>
+
+            <?php endif ?>
 
         </ul>
     </nav>

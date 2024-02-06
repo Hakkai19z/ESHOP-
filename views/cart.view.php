@@ -48,4 +48,4 @@ if (isset($_GET['product'])) {
 
 include "../partials/footer.php"; 
 
-?>  
+?>   

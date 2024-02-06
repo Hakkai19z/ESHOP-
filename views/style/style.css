@@ -165,4 +165,63 @@ button a {
   border-radius: 100px;
 }
 
+.avatar {
+  width: 8.5rem;
+  height: 9rem;
+  border-radius: 100%;
+}
+
+.profile-card {
+  width: 50rem;
+  height: 30rem;
+  margin: auto;
+  display: flex;
+  -webkit-box-shadow: 1px 15px 12px -6px rgba(166,166,166,1);
+  -moz-box-shadow: 1px 15px 12px -6px rgba(166,166,166,1);
+  box-shadow: 1px 15px 12px -6px rgba(166,166,166,1);
+  border-radius: 20px;
+}
+
+.profile-card section {
+  display: flex;
+}
+
+.left {
+  background: linear-gradient(90deg, pink 0%, violet 100%);
+  width: 15rem;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.left img {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 100px;
+  margin-bottom: 1rem;
+}
+
+.right {
+  width: 35rem;
+  padding: 1.5rem;
+}
+
+.right div {
+  width: 17.5rem;
+}
+
+.email, .phone {
+  display: block;
+}
+
+
+
+
+
 
