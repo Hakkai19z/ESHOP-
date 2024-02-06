@@ -12,6 +12,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="./views/style/style.css">
     <link rel="stylesheet" href="../views/style/style.css">
+    <script src="./scripts/app.js" defer></script>
 
 </head>
 
@@ -19,13 +20,16 @@
 
     <nav>
 
-        <ul>
+    <img src="./assets/icons/burger.png" class="burger-menu">
+
+        <ul class="menu">
+            <p class="close-menu">X</p>
             <li><a href="../index.php">Accueil</a></li>
             <li><a href="./views/contact.view.php">Contact</a></li>
 
             <?php if (isset($_SESSION['user']['logged']) && $_SESSION['user']['logged']): ?>
-                
                 <li><a href="./views/products.view.php">Produits</a></li>
+                <li><a href="./views/profile.view.php">Profile</a></li>
                 <li><a href="./views/logout.php">Logout</a></li>
 
             <?php else: ?>

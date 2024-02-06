@@ -2,7 +2,7 @@
 
 <div class="wrapper">
     <h1> Bienvenue sur mon app PHP</h1>
-    <img src="./assets/images/hqdefault-removebg-preview.png" alt="Talmooo frrrr">
+    <img src="./assets/images/eshop-logo.jpg" alt="Talmooo frrrr">
 
 </div>
 
